@@ -8,7 +8,7 @@ namespace BullsAndCows
 {
     internal class ResultsCounter
     {
-        public static string Count(int[] cowsAndBulls, int[] generatedArr)
+        public static void Count(int[] cowsAndBulls, int[] generatedArr)
         {
             string win = $"Поздравляем, вы угадали! \n Вам потребовалось всего {cowsAndBulls[2]} попыток";
 
@@ -24,7 +24,6 @@ namespace BullsAndCows
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine(win);
                 Console.ResetColor();
-                return string.Empty;
             }
             else
             {
@@ -33,8 +32,6 @@ namespace BullsAndCows
                 Console.WriteLine("");
                 ProgramBody.Body(generatedArr, cowsAndBulls[2]);
             }
-
-            return "";
         }
     }
 }
