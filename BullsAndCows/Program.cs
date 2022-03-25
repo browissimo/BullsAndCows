@@ -7,8 +7,9 @@ namespace BullsAndCows
         public static void Main()
         {
             int[] arrToComapre = NumberGenerator.Generate();
+            int tryCount = 10;
 
-            ProgramBody.Body(arrToComapre);
+            ProgramBody.Body(arrToComapre, tryCount);
         }
     }
 

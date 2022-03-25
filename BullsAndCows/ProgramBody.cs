@@ -8,7 +8,7 @@ namespace BullsAndCows
 {
     internal class ProgramBody
     {
-        public static void Body(int[] arr)
+        public static void Body(int[] arr, int tryCount)
         {
             bool valid = false;
             string inputString = string.Empty;
@@ -30,10 +30,7 @@ namespace BullsAndCows
                 inputArr[i] = Convert.ToInt32(char.GetNumericValue(inputString[i]));
             }
 
-
-            //int[] score = CompareArr.FindCowAndBull(inputArr, arrToComapre);
-
-            ResultsCounter.Count(CompareArr.FindCowAndBull(inputArr, arrToComapre), arr);
+            ResultsCounter.Count(CompareArr.FindCowAndBull(inputArr, arrToComapre, tryCount), arr);
 
         }
     }
